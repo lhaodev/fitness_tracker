@@ -35,16 +35,15 @@ router.get("/api/workouts", (req, res) => {
 
 
 router.put("/api/workouts/:id", (req, res) => {
-    Workout.find({})
-        .sort({ date: -1 })
-        .then(dbWorkout => {
-            res.json(dbWorkout);
-        })
-        .catch(err => {
-            res.status(400).json(err);
-        });
+    Workout.findByIdAndUpdate(
+        { id: req.params.id },
+        { exercises: req.body }
+    ).then((dbWorkout) => {
+        res.json(dbWorkout);
+    }).catch(err => {
+        res.status(400).json(err);
+    });
 });
-
 
 
 module.exports = router;
