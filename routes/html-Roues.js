@@ -1,31 +1,17 @@
-// // Dependencies
-// const path = require('path');
-// // Routes
-// module.exports = (app) => {
-//   // Each of the below routes just handles the HTML page that the user gets sent to.
-//   // index route loads view.html
-//   app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../public/index.html'));
-//   });
-//   app.get('/exercise', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../public/exercise.html'));
-//   });
-//   // blog route loads blog.html
-//   app.get('/stats', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../public/stats.html'));
-//   });
-// };
-
-
-const router = require("express").Router();
-const path = require("path");
-
-router.get("/exercise", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/exercise.html"));
-});
-
-router.get("/stats", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/stats.html"));
-});
-
-module.exports = router;
+// Dependencies
+const path = require('path');
+// Routes
+module.exports = (app) => {
+  // Each of the below routes just handles the HTML page that the user gets sent to.
+  // index route loads view.html
+  app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+  });
+  app.get('/exercise', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/exercise.html'));
+  });
+  // blog route loads blog.html
+  app.get('/stats', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/stats.html'));
+  });
+};
