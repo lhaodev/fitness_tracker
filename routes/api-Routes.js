@@ -1,11 +1,14 @@
+
+
 var db = require("../models");
 
 module.exports = function (app) {
 
     // Used by api.js to get last workout
     app.get("/api/workouts", (req, res) => {
-        db.Workout.find({})
-            // .sort({ date: -1 })
+        db.Workout.find(
+            {},
+        )
             .then(dbWorkout => {
                 res.json(dbWorkout);
             })
@@ -42,7 +45,19 @@ module.exports = function (app) {
 
 
     app.get("/api/workouts/range", (req, res) => {
-        db.Workout.find({})
+        // db.Workout.find({
+
+        // }).limit(7)
+
+        // db.Workout.find().sort({ $natural: -1, _id: 1 }).limit(7)
+
+        db.Workout.aggregate([
+            { "$sort": { "_id": -1 } },
+            { "$limit": 7 },
+            { "$sort": { "_id": 1 } }
+        ])
+
+            // db.Workout.find({ $expr: { $limit: 7 } })
             .then(dbWorkout => {
                 res.json(dbWorkout);
             })
