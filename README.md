@@ -64,8 +64,8 @@ The application will be listened on localhost:3030 in your browser URL line.
 
 ## Repository
 
-The link to the github repository is:  
+The link to the github repository is: https://github.com/lhaodev/fitness_tracker 
 
 ## Deployment
 
-The link to the deployed application is: 
+The link to the deployed application is: https://thawing-falls-52927.herokuapp.com/
