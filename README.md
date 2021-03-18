@@ -68,4 +68,4 @@ The link to the github repository is: https://github.com/lhaodev/fitness_tracker
 
 ## Deployment
 
-The link to the deployed application is: https://thawing-falls-52927.herokuapp.com/
+The link to the deployed application is: https://fast-mesa-62687.herokuapp.com/
