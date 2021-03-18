@@ -9,15 +9,14 @@
 ## Table of Contents
 * [Screenshots](#Screenshots)
 * [Installation](#Installation)
-* [Usage](#Usage)
 * [Technologies](#Technologies)
 * [Repository](#Repository)
 * [Deployment](#Deployment)
 
 ## Screenshots
 * [Landing Page](#public/assets/landingpage.png)
-* [Add Exercise](#public/assets/newworkout.png)
-* [Stats](#public/assets/dashboard.png)
+* [Add New Exercise](#public/assets/newworkout.png)
+* [Dashboard](#public/assets/dashboard.png)
 
 #### Landing Page
 The screenshot of the Workout Tracker landing page.
@@ -50,7 +49,7 @@ The screenshot of the Dashboard page.
 
 * Run the application by the following instructions in the terminal
 
-    * **npm install**
+    * **node server.js**
 
 The application will be listened on localhost:3030 in your browser URL line.
 
